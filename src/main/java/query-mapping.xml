@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<property>
+		<name>price</name>
+		<value>
+			INSERT INTO car_salecount(
+			saledate,
+			dateflag,
+			province,
+			salecount)
+			VALUES(?, ?, ?,?) ON DUPLICATE KEY UPDATE saledate = ?,dateflag = ?,province = ?
+		</value>
+	</property>
+
+</configuration>
